@@ -4,29 +4,37 @@ This is my experimentation of Google Firebase. I am using this to prepare for ma
 Love Tap. Currently, this software allows a person to create an account, as well as login. All of 
 this done remotely through the terminal.
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/vxWPMw6ubaI)
 
 # Cloud Database
 
-{Describe the cloud database you are using.}
+For this project, I am using Firebase's realtime database. This database
+is split into the following structure:
 
-{Describe the structure of the database that you created.}
+{an individual connection (ID)} 
+    {Messages}
+        {an individual message}
+            {the actual message}
+            {user views}
+                user1 (boolean of if they have seen it)
+                user2 (boolean of if they have seen it)
+    {users}
+        {A list of user UID's that are in this connection}
+
 
 # Development Environment
 
-{Describe the tools that you used to develop the software}
 
-{Describe the programming language that you used and any libraries.}
+I used PyCharm as my IDE, and I used the pyrebase4 module. This was all written in Python as well. 
+
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
-* [Web Site Name](http://url.link.goes.here)
-* [Web Site Name](http://url.link.goes.here)
+
+* [Web Site Name](https://firebase.google.com/docs/database/security)
+* [Web Site Name](https://firebase.google.com/docs/firestore/query-data/listen#java)
 
 # Future Work
 
-{Make a list of things that you need to fix, improve, and add in the future.}
-* Item 1
-* Item 2
-* Item 3
+
+* I need to make it so that users can add to their messages, but ONLY their messages
